@@ -49,14 +49,15 @@ ul{list-style:none}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 
 /* ===== Animations ===== */
-.animate-up{opacity:0;transform:translateY(40px);transition:opacity 0.7s ease,transform 0.7s ease}
+.animate-up{opacity:0;transform:translateY(50px);transition:opacity 0.9s cubic-bezier(0.22,1,0.36,1),transform 0.9s cubic-bezier(0.22,1,0.36,1)}
 .animate-up.visible{opacity:1;transform:translateY(0)}
-.delay-1{transition-delay:0.15s}
-.delay-2{transition-delay:0.3s}
+.delay-1{transition-delay:0.2s}
+.delay-2{transition-delay:0.4s}
 
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes pulse-glow{0%,100%{opacity:0.4}50%{opacity:0.7}}
 @keyframes gradient-shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
 
 /* ===== Common ===== */
 .gradient-text{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:gradient-shift 4s ease infinite}
@@ -65,11 +66,11 @@ ul{list-style:none}
 .section-header h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:12px}
 .section-header p{color:var(--text-muted);font-size:1.05rem}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 28px;border-radius:10px;font-weight:600;font-size:0.95rem;cursor:pointer;transition:all 0.3s ease;border:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 28px;border-radius:10px;font-weight:600;font-size:0.95rem;cursor:pointer;transition:all 0.4s cubic-bezier(0.22,1,0.36,1);border:none}
 .btn-primary{background:var(--gradient);color:#fff;background-size:200% 200%;animation:gradient-shift 4s ease infinite}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(16,185,129,0.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(16,185,129,0.35)}
 .btn-outline{border:1.5px solid var(--border);color:var(--text);background:transparent}
-.btn-outline:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
+.btn-outline:hover{border-color:var(--green);color:var(--green);transform:translateY(-3px)}
 .btn-lg{padding:16px 36px;font-size:1.05rem;border-radius:12px}
 .btn-block{width:100%;text-align:center}
 
@@ -79,8 +80,8 @@ ul{list-style:none}
 .logo{display:flex;align-items:center;gap:10px;font-size:1.2rem;font-weight:700}
 .logo img{border-radius:8px}
 .nav-links{display:flex;gap:32px}
-.nav-links a{color:var(--text-muted);font-weight:500;font-size:0.95rem;transition:color 0.3s}
-.nav-links a:hover{color:var(--text)}
+.nav-links a{color:var(--text-muted);font-weight:500;font-size:0.95rem;transition:color 0.4s cubic-bezier(0.22,1,0.36,1)}
+.nav-links a:hover{color:var(--green)}
 .nav-cta{padding:10px 24px;font-size:0.9rem}
 .nav-right{display:flex;align-items:center;gap:12px}
 .theme-toggle{background:none;border:1.5px solid var(--border);border-radius:8px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-muted);transition:all 0.3s}
@@ -110,8 +111,8 @@ ul{list-style:none}
 /* ===== Features ===== */
 .features{padding:100px 0;position:relative}
 .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.feature-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;transition:all 0.4s ease}
-.feature-card:hover{transform:translateY(-6px);border-color:rgba(16,185,129,0.3);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
+.feature-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;transition:all 0.5s cubic-bezier(0.22,1,0.36,1)}
+.feature-card:hover{transform:translateY(-8px);border-color:rgba(16,185,129,0.3);box-shadow:0 16px 50px rgba(0,0,0,0.2)}
 .feature-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
 .feature-card h3{font-size:1.15rem;font-weight:700;margin-bottom:8px}
 .feature-card p{color:var(--text-muted);font-size:0.9rem;line-height:1.6}
@@ -119,8 +120,8 @@ ul{list-style:none}
 /* ===== Account Modes ===== */
 .accounts{padding:100px 0;background:linear-gradient(180deg,transparent,rgba(16,185,129,0.03),transparent)}
 .accounts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.account-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px;transition:all 0.4s ease}
-.account-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.account-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px;transition:all 0.5s cubic-bezier(0.22,1,0.36,1)}
+.account-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
 .account-badge{display:inline-block;padding:4px 14px;border-radius:50px;font-size:0.8rem;font-weight:700;color:#fff;margin-bottom:16px}
 .personal-bg{background:var(--green)}
 .business-bg{background:var(--blue)}
@@ -149,8 +150,8 @@ ul{list-style:none}
 /* ===== Pricing ===== */
 .pricing{padding:100px 0;background:linear-gradient(180deg,transparent,rgba(139,92,246,0.03),transparent)}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
-.pricing-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px;transition:all 0.4s ease;position:relative}
-.pricing-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.pricing-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px;transition:all 0.5s cubic-bezier(0.22,1,0.36,1);position:relative}
+.pricing-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
 .pricing-card.featured{border-color:rgba(16,185,129,0.4);background:linear-gradient(135deg,rgba(16,185,129,0.06),rgba(59,130,246,0.06))}
 .popular-tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gradient);color:#fff;padding:4px 20px;border-radius:50px;font-size:0.8rem;font-weight:700;background-size:200% 200%;animation:gradient-shift 4s ease infinite}
 .pricing-header{margin-bottom:28px}
